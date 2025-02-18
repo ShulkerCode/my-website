@@ -1,0 +1,192 @@
+/* 🌍 Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;  /* Dark theme */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🏡 Header & Navigation Bar */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #6a0dad; /* Purple theme */
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f3e5f5;
+}
+
+/* 📄 Sections & Content */
+section {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6a0dad;
+}
+
+section h3 {
+    color: #f3e5f5;
+}
+
+/* 🖼️ Member Profiles */
+.profile {
+    text-align: center;
+    padding: 2rem;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 3px solid #6a0dad;
+}
+
+/* 🔘 Buttons & Links */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #6a0dad;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #540b8a;
+}
+
+/* 📝 Forms (Contact Page) */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #6a0dad;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #540b8a;
+}
+
+/* 🔻 Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #bbb;
+}
+
+/* 🎭 Animations & Effects */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 💡 Donation Section */
+.donation-info {
+    text-align: center;
+}
+
+.donation-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.donation-info a {
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+.donation-info a:hover {
+    color: #f3e5f5;
+}
+
+/* 💬 Contact Form Styling */
+.contact-form {
+    margin-top: 2rem;
+}
+
+.contact-form input, .contact-form textarea {
+    font-size: 1.1rem;
+}
+
+/* 🖤 Hover Effects */
+section:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.98);
+}
