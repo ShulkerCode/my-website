@@ -1,3 +1,11 @@
+/* 🔹 Logo Styling */
+.logo {
+    width: 100px;  /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;  /* Center the logo */
+}
+
 /* 🌍 Global Styles - Universal Resets */
 * {
     margin: 0;
