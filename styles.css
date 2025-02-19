@@ -173,13 +173,16 @@ html {
 
 section {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-section.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* 🎮 Donation Section */
@@ -216,63 +219,4 @@ section:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* 📱 Responsive Design for Mobile */
-@media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
 
-    header {
-        padding: 1.5rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-
-    .profile img {
-        width: 150px;
-    }
-}
-
-/* 🖥️ Responsive Design for Large Screens */
-@media (min-width: 1200px) {
-    body {
-        font-size: 1.2rem;
-    }
-
-    header {
-        padding: 2.5rem;
-    }
-
-    header h1 {
-        font-size: 3.5rem;
-    }
-
-    nav ul li a {
-        font-size: 1.3rem;
-    }
-
-    section {
-        padding: 3rem;
-        margin: 2rem;
-    }
-
-    .profile img {
-        width: 250px;
-    }
-}
