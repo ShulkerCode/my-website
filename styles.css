@@ -1,10 +1,30 @@
 /* 🔹 Logo Styling */
-.logo {
-    width: 100px;  /* Adjust size */
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;  /* Center the logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px; /* Space between logo and text */
+    flex-wrap: wrap;
 }
+
+.logo {
+    width: 80px;  /* Adjust size */
+    height: auto;
+}
+
+/* 🏡 Responsive Logo for Mobile */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;  /* Smaller on mobile */
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
 /* 🌍 Global Styles - Universal Resets */
 * {
