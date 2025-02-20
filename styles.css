@@ -1,52 +1,3 @@
-/* 🔹 QR Code Styling */
-.qr-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.qr-code {
-    width: 200px; /* Adjust size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-/* 🏡 Responsive QR Code for Mobile */
-@media (max-width: 768px) {
-    .qr-code {
-        width: 150px; /* Smaller on mobile */
-    }
-}
-
-/* 🔹 Logo Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 15px; /* Space between logo and text */
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 80px;  /* Adjust size */
-    height: auto;
-}
-
-/* 🏡 Responsive Logo for Mobile */
-@media (max-width: 768px) {
-    .logo {
-        width: 60px;  /* Smaller on mobile */
-    }
-
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* 🌍 Global Styles - Universal Resets */
 * {
     margin: 0;
@@ -75,42 +26,35 @@ header {
     justify-content: center;
 }
 
-/* 🔹 Fix Header Layout (Prevents Overlap) */
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    max-width: 90%;  /* Prevents long text from stretching */
-}
-
-/* 🔹 Logo Styling */
-.logo {
-    width: 100px;  /* Default size */
-    height: auto;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-/* 🏡 Header Text */
+/* 🏡 Fix Header Layout (Prevents Overlap) */
 header h1 {
     font-size: 2.5rem;
-    margin: 0;
+    margin-bottom: 15px; /* Added spacing below the title */
 }
 
-/* 🏡 Navigation */
+header p {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin-bottom: 25px; /* Added more spacing below description */
+}
+
+/* 🔹 Fix Navigation Menu Spacing */
 nav {
     width: 100%;
-    margin-top: 20px; /* Adds space between header and nav */
+    margin-top: 15px; /* Ensures space between header text and menu */
+    padding-top: 10px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 10px 15px;
+    margin: 10px 20px; /* Adds space between navigation items */
 }
 
 nav ul li a {
@@ -126,8 +70,8 @@ nav ul li a:hover {
 
 /* 📄 Section Layouts */
 section {
-    padding: 2rem;
-    margin: 1.5rem;
+    padding: 2.5rem;
+    margin: 2rem;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -136,26 +80,6 @@ section {
 
 section:hover {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* 🟣 Fix Text Visibility (Headings & Buttons) */
-h2, h3 {
-    color: #f3e5f5; /* Light purple for visibility */
-}
-
-button {
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #540b8a;
 }
 
 /* 🎭 Animations & Smooth Scroll */
@@ -190,7 +114,7 @@ footer {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .logo {
@@ -204,6 +128,11 @@ footer {
 
     header p {
         font-size: 1rem;
+        margin-bottom: 20px; /* Adds spacing below description */
+    }
+
+    nav {
+        padding-top: 10px; /* Ensures space between header and nav */
     }
 
     nav ul {
@@ -212,7 +141,7 @@ footer {
 
     nav ul li {
         display: block;
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     section {
@@ -238,6 +167,7 @@ footer {
     header p {
         font-size: 1.3rem;
         max-width: 70%;
+        margin-bottom: 30px; /* Extra space below */
     }
 
     nav ul li a {
