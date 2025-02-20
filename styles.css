@@ -1,3 +1,25 @@
+/* 🔹 QR Code Styling */
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.qr-code {
+    width: 200px; /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 🏡 Responsive QR Code for Mobile */
+@media (max-width: 768px) {
+    .qr-code {
+        width: 150px; /* Smaller on mobile */
+    }
+}
+
 /* 🔹 Logo Styling */
 .logo-container {
     display: flex;
