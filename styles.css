@@ -25,7 +25,6 @@
     }
 }
 
-
 /* 🌍 Global Styles - Universal Resets */
 * {
     margin: 0;
@@ -47,11 +46,18 @@ header {
     background-color: #6a0dad;  /* Purple theme */
     color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+/* 🔹 Fix Header Layout (Prevents Overlap) */
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    max-width: 90%;  /* Prevents long text from stretching */
 }
 
 /* 🔹 Logo Styling */
@@ -59,7 +65,7 @@ header {
     width: 100px;  /* Default size */
     height: auto;
     display: inline-block;
-    margin-right: 15px;  /* Spacing between logo and text */
+    margin-bottom: 10px;
 }
 
 /* 🏡 Header Text */
@@ -69,16 +75,20 @@ header h1 {
 }
 
 /* 🏡 Navigation */
+nav {
+    width: 100%;
+    margin-top: 20px; /* Adds space between header and nav */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px;
     text-align: center;
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 25px;
+    margin: 10px 15px;
 }
 
 nav ul li a {
@@ -104,6 +114,26 @@ section {
 
 section:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 🟣 Fix Text Visibility (Headings & Buttons) */
+h2, h3 {
+    color: #f3e5f5; /* Light purple for visibility */
+}
+
+button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #540b8a;
 }
 
 /* 🎭 Animations & Smooth Scroll */
@@ -150,6 +180,10 @@ footer {
         font-size: 2rem;
     }
 
+    header p {
+        font-size: 1rem;
+    }
+
     nav ul {
         padding: 0;
     }
@@ -158,12 +192,17 @@ footer {
         display: block;
         margin: 5px 0;
     }
+
+    section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
 }
 
 /* 🖥️ Responsive Design for Large Screens */
 @media (min-width: 1200px) {
     header {
-        padding: 2rem;
+        padding: 2.5rem;
     }
 
     .logo {
@@ -172,5 +211,19 @@ footer {
 
     header h1 {
         font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+        max-width: 70%;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem;
+        margin: 2rem;
     }
 }
