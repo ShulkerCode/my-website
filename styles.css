@@ -1,3 +1,9 @@
+/* 🔹 Subtitles Styling */
+h2, h3 {
+    color: #bb86fc; /* Light purple that matches the theme */
+    font-weight: bold;
+}
+
 /* 🔹 Navigation Button Styling */
 nav ul li a {
     color: #f3e5f5; /* Light purple */
