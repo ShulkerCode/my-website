@@ -1,3 +1,22 @@
+/* 🔹 Button Enhancements */
+button, .btn {
+    background-color: #bb86fc; /* Matching purple */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background-color: #9b59b6; /* Slightly darker purple */
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
 /* 🔹 Section Styling */
 section {
     background: rgba(255, 255, 255, 0.05); /* Subtle transparency */
