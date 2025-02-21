@@ -1,3 +1,7 @@
+/* 🔹 Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
 /* 🔹 Subtitles Styling */
 h2, h3 {
     color: #bb86fc; /* Light purple that matches the theme */
