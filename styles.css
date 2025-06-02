@@ -103,14 +103,7 @@ section:hover {
   box-shadow: 0 12px 30px rgba(106, 13, 173, 0.8);
 }
 
-/* Blog Section Container - SINGLE box behind all blog posts */
-.blog-container {
-  background-color: #1a1a1a;
-  padding: 40px 30px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-  margin-bottom: 50px;
-}
+
 
 /* Remove extra box from individual blog posts */
 .blog-post {
@@ -150,12 +143,6 @@ section:hover {
   margin-bottom: 12px;
 }
 
-.blog-post p {
-  color: white;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-top: 12px;
-}
 
 /* Buttons */
 button {
