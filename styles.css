@@ -308,3 +308,37 @@ footer {
         margin: 2rem;
     }
 }
+
+/* Blog page styles */
+.post {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post h2 {
+    color: #4a90e2;
+    margin-bottom: 5px;
+}
+
+.post .date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
