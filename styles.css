@@ -1,429 +1,274 @@
+/* Smooth scrolling */
 html {
-    scroll-behavior: smooth;
-}
-/* 🔹 Subtitles Styling */
-h2, h3 {
-    color: #bb86fc; /* Light purple that matches the theme */
-    font-weight: bold;
+  scroll-behavior: smooth;
 }
 
-/* 🔹 Navigation Button Styling */
-nav ul li a {
-    color: #f3e5f5; /* Light purple */
-    background-color: #4a0072; /* Darker purple shade */
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #6a0dad; /* Lighter purple on hover */
-    color: white;
-}
-
-/* 🔹 Fix Header Layout (Prevents Overlap) */
-header h1 {
-    margin-bottom: 10px; /* Add spacing below title */
-    font-size: 2.5rem;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    max-width: 90%;
-    text-align: center;
-}
-
-/* 🔹 Ensure Navigation Doesn't Overlap */
-nav {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px 0;
-}
-
-/* 🔹 Adjust Text & Button Colors */
-h2, h3 {
-    color: #f3e5f5; /* Light purple for better contrast */
-}
-
-button, a {
-    color: white !important;
-}
-
-/* 🔹 QR Code Styling */
-.qr-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.qr-code {
-    width: 200px; /* Adjust size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-/* 🏡 Responsive QR Code for Mobile */
-@media (max-width: 768px) {
-    .qr-code {
-        width: 150px; /* Smaller on mobile */
-    }
-}
-
-/* 🔹 Logo Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 15px; /* Space between logo and text */
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 80px;  /* Adjust size */
-    height: auto;
-}
-
-/* 🏡 Responsive Logo for Mobile */
-@media (max-width: 768px) {
-    .logo {
-        width: 60px;  /* Smaller on mobile */
-    }
-
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* 🌍 Global Styles - Universal Resets */
+/* Universal reset and box sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body & Base Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;  /* Dark theme */
-    color: white;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* Deep dark background */
+  color: white;              /* Main text white for clarity */
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* 🏡 Header & Navigation Bar */
+/* Header Section */
 header {
-    background-color: #6a0dad;  /* Purple theme */
-    color: white;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.6);
+  margin-bottom: 40px;
 }
 
-/* 🔹 Fix Header Layout (Prevents Overlap) */
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px; /* Added spacing below the title */
+  font-size: 3rem;
+  color: #6a0dad; /* Dark purple */
+  margin-bottom: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
-    max-width: 90%;
-    margin-bottom: 30px; /* Added more spacing below description */
+  font-size: 1.25rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-/* 🔹 Fix Navigation Menu Spacing */
+/* Navigation Bar */
 nav {
-    width: 100%;
-    margin-top: 10px; /* Ensures space between header text and menu */
-    padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 10px 20px; /* Adds space between navigation items */
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  background-color: #6a0dad;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(106, 13, 173, 0.5);
 }
 
-nav ul li a:hover {
-    color: #f3e5f5;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #4a057a;
+  box-shadow: 0 6px 14px rgba(106, 13, 173, 0.9);
+  color: #f0e9ff;
 }
 
-/* 📄 Section Layouts */
+/* Section Styling */
 section {
-    padding: 2rem;
-    margin: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+  background-color: #1a1a1a; /* Slightly lighter dark */
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
 }
 
 section:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(106, 13, 173, 0.8);
 }
 
-/* 🟣 Fix Text Visibility (Headings & Buttons) */
-h2, h3 {
-    color: #f3e5f5; /* Light purple for visibility */
+/* Section Titles - About, Members etc */
+section > h2,
+section > h3 {
+  color: #6a0dad;  /* Dark purple */
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1.3px;
+  text-shadow: 0 0 5px rgba(106, 13, 173, 0.8);
 }
 
-button {
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Section Paragraphs */
+section p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
-button:hover {
-    background-color: #540b8a;
-}
-
-/* 🎭 Animations & Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 🔻 Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: #bbb;
-}
-
-/* 📱 Responsive Design for Mobile */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .logo {
-        width: 80px;  /* Smaller logo on mobile */
-        margin-bottom: 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-        margin-bottom: 25px; /* Ensures enough space */
-    }
-
-    nav {
-        padding-top: 10px; /* Ensures space between header and nav */
-    }
-
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-}
-
-/* 🖥️ Responsive Design for Large Screens */
-@media (min-width: 1200px) {
-    header {
-        padding: 2.5rem;
-    }
-
-    .logo {
-        width: 120px;
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-
-    header p {
-        font-size: 1.3rem;
-        max-width: 70%;
-        margin-bottom: 30px; /* Extra space below */
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-
-    section {
-        padding: 3rem;
-        margin: 2rem;
-    }
-}
-
-/* Blog page styles */
-.post {
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.post h2 {
-    color: #4a90e2;
-    margin-bottom: 5px;
-}
-
-.post .date {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-a {
-    color: #61dafb;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Container styling (make sure your other pages use this too) */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-}
-
-/* Blog page title */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #222;
-}
-
-/* Blog list container */
-.blog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Each blog post box */
+/* Blog Posts Container */
 .blog-post {
-  background-color: #f0f0f0; /* light grey box */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  background-color: #121212;  /* Dark grey box matching body */
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+  margin-bottom: 30px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect: highlight */
-.blog-post:hover {
-  background-color: #dcdcdc; /* darker grey */
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
   cursor: pointer;
 }
 
-/* Blog post title link */
+.blog-post:hover {
+  background-color: #1e1e1e;
+  box-shadow: 0 12px 40px rgba(106, 13, 173, 0.9);
+}
+
 .blog-post h2 a {
-  color: #222;
+  color: #6a0dad; /* Dark purple blog title */
+  font-size: 1.8rem;
+  font-weight: 800;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Change title color on hover */
 .blog-post:hover h2 a {
-  color: #007acc; /* your website’s theme accent color */
+  color: #8e44ad; /* lighter purple on hover */
 }
 
-/* Date styling */
-.date {
+.blog-post .date {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
   font-style: italic;
+  color: #aaa;
+  margin-bottom: 12px;
 }
 
-/* Paragraph styling */
 .blog-post p {
+  color: white;
+  font-size: 1rem;
   line-height: 1.6;
-}
-nav ul li a.active,
-nav ul li a:hover {
-  color: #007acc; /* or your theme accent */
-  font-weight: bold;
+  margin-top: 12px;
 }
 
-/* Standardize font size for all headers */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 2.5rem; /* Adjust as needed */
-  font-weight: bold;
-  color: #333; /* Or your theme's primary text color */
-  margin: 0;
-  padding: 0;
+/* Buttons */
+button {
+  background-color: #6a0dad;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(106, 13, 173, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
 }
 
-/* Specific styling for the logo */
+button:hover {
+  background-color: #4a057a;
+  box-shadow: 0 8px 22px rgba(106, 13, 173, 1);
+}
+
+/* QR Code container */
+.qr-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(106, 13, 173, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.1);
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
 .logo {
-  font-size: 2.5rem; /* Matches other headers */
-  font-weight: bold;
-  color: #333; /* Or your theme's primary text color */
-  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #6a0dad;
+  text-shadow: 0 0 12px rgba(106, 13, 173, 0.85);
+  cursor: default;
+}
+
+/* Links */
+a {
+  color: #9b59b6;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d1aaff;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: #aaa;
+  font-size: 0.95rem;
+  border-top: 1px solid #333;
+  margin-top: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    padding: 12px 25px;
+  }
+
+  section {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+  }
+
+  .blog-post {
+    padding: 25px 20px;
+  }
+
+  .blog-post h2 a {
+    font-size: 1.5rem;
+  }
+
+  .qr-code {
+    width: 150px;
+    height: 150px;
+  }
 }
