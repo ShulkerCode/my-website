@@ -13,15 +13,7 @@ document.querySelectorAll("nav ul li a").forEach(anchor => {
     });
 });
 
-// ✅ 2. Welcome Message (Shows Only Once Per Session)
-window.onload = function() {
-    if (!sessionStorage.getItem("welcomeMessageShown")) {
-        setTimeout(() => {
-            alert("Welcome to ShulkerCode! 🚀 Let's create amazing Minecraft mods together!");
-            sessionStorage.setItem("welcomeMessageShown", "true");
-        }, 1000);
-    }
-};
+
 
 // ✅ 3. Copy UPI ID Button (For Donations)
 document.addEventListener("DOMContentLoaded", function() {
