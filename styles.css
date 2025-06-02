@@ -276,10 +276,9 @@ footer {
     height: 150px;
   }
 }
-.logo {
-  font-size: 2rem; /* smaller size */
-  font-weight: 900;
-  color: #6a0dad;
-  text-shadow: 0 0 12px rgba(106, 13, 173, 0.85);
-  cursor: default;
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+  }
 }
+
