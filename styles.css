@@ -30,6 +30,15 @@ header {
   margin-bottom: 40px;
 }
 
+/* Logo Image */
+.logo-container img {
+  max-width: 140px;  /* Controlled logo size */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  filter: drop-shadow(0 0 6px rgba(106, 13, 173, 0.8));
+}
+
 header h1 {
   font-size: 3rem;
   color: #6a0dad; /* Dark purple */
@@ -114,6 +123,46 @@ section p {
   font-weight: 400;
 }
 
+/* Boxes on Home, Members, Contact, etc. */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.box {
+  background-color: #121212;  /* Dark grey matching site */
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+  max-width: 320px;
+  flex: 1 1 280px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box:hover {
+  background-color: #1e1e1e;
+  box-shadow: 0 12px 40px rgba(106, 13, 173, 0.9);
+  transform: translateY(-6px);
+}
+
+.box h3 {
+  color: #6a0dad;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.box p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /* Blog Posts Container */
 .blog-post {
   background-color: #121212;  /* Dark grey box matching body */
@@ -134,7 +183,7 @@ section p {
   color: #6a0dad; /* Dark purple blog title */
   font-size: 1.8rem;
   font-weight: 800;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline here */
   transition: color 0.3s ease;
 }
 
@@ -195,16 +244,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Logo Styling */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  align-items: center;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
+/* Logo Styling Text (if used) */
 .logo {
   font-size: 3rem;
   font-weight: 900;
@@ -217,6 +257,7 @@ button:hover {
 a {
   color: #9b59b6;
   transition: color 0.3s ease;
+  text-decoration: none; /* Prevent underline on all links unless hovered */
 }
 
 a:hover {
@@ -270,5 +311,20 @@ footer {
   .qr-code {
     width: 150px;
     height: 150px;
+  }
+
+  .box-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .box {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .logo-container img {
+    max-width: 110px;
+    margin-bottom: 15px;
   }
 }
