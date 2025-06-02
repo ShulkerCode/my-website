@@ -411,3 +411,19 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+/* Standardize font size for all headers */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2.5rem; /* Adjust as needed */
+  font-weight: bold;
+  color: #333; /* Or your theme's primary text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Specific styling for the logo */
+.logo {
+  font-size: 2.5rem; /* Matches other headers */
+  font-weight: bold;
+  color: #333; /* Or your theme's primary text color */
+  text-decoration: none;
+}
