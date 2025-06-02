@@ -31,11 +31,13 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;   /* smaller logo font size */
   color: #6a0dad; /* Dark purple */
   margin-bottom: 10px;
   font-weight: 900;
   letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(106, 13, 173, 0.85);
+  cursor: default;
 }
 
 header p {
@@ -101,51 +103,34 @@ section:hover {
   box-shadow: 0 12px 30px rgba(106, 13, 173, 0.8);
 }
 
-/* Remove extra box in Blog page by limiting shadow and background on blog-post only */
-.blog-post-container {
-  background-color: transparent !important; /* No background box for blog container */
-  box-shadow: none !important;
-  margin-bottom: 30px;
-  padding: 0;
+/* Blog Section Container - SINGLE box behind all blog posts */
+.blog-container {
+  background-color: #1a1a1a;
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px;
 }
 
-/* Section Titles - About, Members etc */
-section > h2,
-section > h3 {
-  color: #6a0dad;  /* Dark purple */
-  font-weight: 900;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  letter-spacing: 1.3px;
-  text-shadow: 0 0 5px rgba(106, 13, 173, 0.8);
-}
-
-/* Section Paragraphs */
-section p {
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.75;
-  max-width: 720px;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-}
-
-/* Blog Posts Container */
+/* Remove extra box from individual blog posts */
 .blog-post {
-  background-color: #121212;  /* Dark grey box matching body */
-  padding: 30px 25px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+  background-color: transparent; /* transparent inside the main blog container */
+  padding: 0;
   margin-bottom: 30px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  border-radius: 0;
   cursor: pointer;
+  transition: none;
 }
 
 .blog-post:hover {
-  background-color: #1e1e1e;
-  box-shadow: 0 12px 40px rgba(106, 13, 173, 0.9);
+  background-color: #2a2a2a;  /* subtle hover effect */
+  box-shadow: 0 8px 25px rgba(106, 13, 173, 0.6);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Blog post titles */
 .blog-post h2 a {
   color: #6a0dad; /* Dark purple blog title */
   font-size: 1.8rem;
@@ -222,10 +207,10 @@ button:hover {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 1.8rem; /* smaller logo size */
   font-weight: 900;
   color: #6a0dad;
-  text-shadow: 0 0 12px rgba(106, 13, 173, 0.85);
+  text-shadow: 0 0 8px rgba(106, 13, 173, 0.7);
   cursor: default;
 }
 
@@ -254,7 +239,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;  /* scaled down for small screens */
   }
 
   header p {
@@ -280,10 +265,6 @@ footer {
   section {
     padding: 30px 20px;
     margin-bottom: 40px;
-  }
-
-  .blog-post {
-    padding: 25px 20px;
   }
 
   .blog-post h2 a {
