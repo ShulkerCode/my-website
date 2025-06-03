@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ShulkerCode - Blogs</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Add this if not already in styles.css */
+    .search-bar {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 20px 0;
+      font-size: 1rem;
+      background-color: #1a1a1a;
+      color: white;
+      border: 2px solid #8000ff;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .search-bar:focus {
+      border-color: #a64dff;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,24 +45,26 @@
   <main class="container">
     <h1>Blogs</h1>
 
-   <section class="blog-list">
-  <a href="blog-post-1.html" class="blog-link">
-    <article class="blog-post">
-      <h2>How to Install HyprDots on Vanilla Arch</h2>
-      <p class="date">Published on June 2, 2025</p>
-      <p>Step-by-step guide to install HyprDots dotfiles on a clean Arch Linux setup. </p>
-    </article>
-  </a>
+    <!-- ✅ Search bar added -->
+    <input type="text" id="searchBar" placeholder="Search blogs..." class="search-bar" />
 
-  <a href="blog-post-2.html" class="blog-link">
-    <article class="blog-post">
-      <h2>Why &lt;?&gt; – The story behind our logo</h2>
-      <p class="date">Published on June 3, 2025</p>
-      <p>A funny and honest backstory about how we accidentally ended up with <?> as our logo.</p>
-    </article>
-  </a>
-</section>
+    <section class="blog-list" id="blogList">
+      <a href="blog-post-1.html" class="blog-link">
+        <article class="blog-post">
+          <h2>How to Install HyprDots on Vanilla Arch</h2>
+          <p class="date">Published on June 2, 2025</p>
+          <p>Step-by-step guide to install HyprDots dotfiles on a clean Arch Linux setup.</p>
+        </article>
+      </a>
 
+      <a href="blog-post-2.html" class="blog-link">
+        <article class="blog-post">
+          <h2>Why &lt;?&gt; – The story behind our logo</h2>
+          <p class="date">Published on June 3, 2025</p>
+          <p>A funny and honest backstory about how we accidentally ended up with &lt;?&gt; as our logo.</p>
+        </article>
+      </a>
+    </section>
   </main>
 
   <footer>
@@ -51,5 +72,20 @@
       <p>&copy; 2025 ShulkerCode. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ✅ JavaScript for search -->
+  <script>
+    const searchInput = document.getElementById("searchBar");
+    const blogLinks = document.querySelectorAll(".blog-link");
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+
+      blogLinks.forEach(link => {
+        const text = link.innerText.toLowerCase();
+        link.style.display = text.includes(query) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
